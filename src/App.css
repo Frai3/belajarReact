@@ -5,7 +5,8 @@
 }
 
 .logo img{
-  width: 8%;
+  width: 150px;
+  position: absolute;
   padding: 10px 0 0 10px;
   float: left;
 }

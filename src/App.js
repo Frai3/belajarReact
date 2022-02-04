@@ -1,21 +1,27 @@
 import './App.css';
 import NavigationHeader from './navigationHeader'
-import Content from './content';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import GambarDashboard from './gambarDashboard';
 import { React } from 'react';
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import { BrowserRouter } from 'react-router-dom/cjs/react-router-dom.min';
 
-function App() {
-  return (
-    <div>
-      <NavigationHeader />
-      <GambarDashboard />
-      <br />
-      <Content />
-      <br />
-    </div>
+import Home from './tes/home';
+import About from './tes/about';
+import BeritaBoruto from './berita/boruto';
+import Berita from "./berita/berita";
+
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+
+
+const App = () => {
+  return(
+  <Router>
+    <NavigationHeader />
+    <Switch>
+      <Route path="/" exact component={Home} />
+      <Route path="/about" exact component={About} />
+      <Route path="/boruto" component={BeritaBoruto} />
+      <Route path="/berita" component={Berita} />
+    </Switch>
+  </Router>    
   );
 }
 
