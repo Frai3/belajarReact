@@ -18,18 +18,24 @@ function Content() {
                         <div className="p-2 bd-highlight">
                             <div className="col">
                                 <div className="imgContentLeft">
-                                    <img id="Right" src="Mitsuki.jpg" />
+                                    <a href='./mitsuki'>
+                                        <img id="Right" src="Mitsuki.jpg" />
+                                    </a>
                                 </div>
                             </div>
                             <div className="col">
                                 <div className="imgContentRight">
-                                    <img id="Right" src="Sarada.jpg" />
+                                    <a href='./sarada'>
+                                        <img id="Right" src="Sarada.jpg" />
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         <div className="p-2 bd-highlight">
                             <div className="imgContent">
-                                <img id="Right" src="Kawaki.png" />
+                                <a href='./kawaki'>
+                                    <img id="Right" src="Kawaki.png" />
+                                </a>
                             </div>
                         </div>
                     </div>

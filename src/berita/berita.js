@@ -2,78 +2,79 @@ import '../App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Berita(props) {
-    const {ID} = props
-    const KontenBerita=[{
-        "id" : "Boruto",
+    const { ID } = props
+    const KontenBerita = [{
+        "id": "Boruto",
         "judul": "Sang Anak Hokage",
-        "isi": "Anak hokage ke-7 Naruto Uzumaki yaitu Boruto Uzimaki"
+        "isi": "Anak hokage ke-7 Naruto Uzumaki yaitu Boruto Uzimaki",
+        "gambar": "Boruto.jpg"
     },
     {
-        "id" : "Sarada",
+        "id": "Sarada",
         "judul": "Anak Sasuke",
-        "isi": "Anak Sasuke Uchiha yitu Sarada Uchiha"
+        "isi": "Anak Sasuke Uchiha yitu Sarada Uchiha",
+        "gambar": "Sarada.jpg"
     },
     {
-        "id" : "Mitsuki",
+        "id": "Mitsuki",
         "judul": "Anak Sanin Legendaris",
-        "isi": "Anak dari salah satu Sanin Legendaris Orochimari yaitu Mitsuki"
+        "isi": "Anak dari salah satu Sanin Legendaris Orochimari yaitu Mitsuki",
+        "gambar": "Mitsuki.jpg"
     },
     {
-        "id" : "Kawaki",
+        "id": "Kawaki",
         "judul": "Cloning Gagal Momoshiki",
-        "isi": "Hasil cloning yang digagalkan yaitu Kawaki"
+        "isi": "Hasil cloning yang digagalkan yaitu Kawaki",
+        "gambar": "Kawaki.png"
     }
     ];
-
-    const ListBerita = KontenBerita.map((ItemBerita) =>
-    <div key={ItemBerita.id}>
-        <h3>{ItemBerita.judul}</h3>
-        <p>{ItemBerita.isi}</p>
-    </div>
-    );
-
-    return(
+    return (
         <div>
-            <h2>Berita Hari Ini</h2>
-            <InfoBerita ID={ID}/>
+            <div className='container'>
+                <center>
+                    <h1>Berita Hari Ini</h1>
+                    <div id="Berita">
+                        <div className="IsiBerita">
+                            <InfoBerita ID={ID} />
+                        </div>
+                    </div>
+                </center>
+            </div>
         </div>
     );
 
     function InfoBerita(props) {
-        const {ID} = props
-        return(
-            <div>
-                <p>InfoBerita</p>
-                <CheckID ID={ID} />
-            </div>
-        )
-    }
-
-    function CheckID(props) {
-        const {ID} = props
+        const { ID } = props
         var JudulBerita = []
         var IsiBerita = []
-        
-        if(ID == "Boruto"){
-            JudulBerita.push(KontenBerita[0].judul)
-            IsiBerita.push(KontenBerita[0].isi)
-            return(
-                <div>
-                    <div>{JudulBerita}</div>
-                    <div>{IsiBerita}</div>
-                </div>
-            );
+        var Gambar = []
+        var kode
+
+        if (ID == "Boruto") {
+            kode = 0
         }
-        else if(ID == "Sarada"){
-            JudulBerita.push(KontenBerita[1].judul)
-            IsiBerita.push(KontenBerita[1].isi)
-            return(
-                <div>
-                    <div>{JudulBerita}</div>
-                    <div>{IsiBerita}</div>
-                </div>          
-            );
+        else if (ID == "Sarada") {
+            kode = 1
         }
+        else if (ID == "Mitsuki") {
+            kode = 2
+        }
+        else if (ID == "Kawaki") {
+            kode = 3
+        }
+
+        JudulBerita.push(KontenBerita[kode].judul)
+        IsiBerita.push(KontenBerita[kode].isi)
+        Gambar.push(KontenBerita[kode].gambar)
+
+        return (
+            <div>
+                <img src={Gambar} />
+                <h1>{JudulBerita}</h1>
+                <div>{IsiBerita}</div>
+            </div>
+        );
+
     }
 
 }
