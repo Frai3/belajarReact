@@ -1,5 +1,5 @@
 import React from "react";
-import Berita from "./berita";
+import Berita from "./isiBerita";
 
 const Sarada = () => {
     return <div><Berita ID="Sarada" /></div>

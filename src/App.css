@@ -1,5 +1,11 @@
+.background{
+  /* background-color: #7399bd; */
+  background-color: #e9e2ce;
+}
+
 #header{
-  background-color: #F5F5F5;
+  /* background-color: #E2E9CE; */
+  background-color: #7399bd;
   width: 100%;
   height: 150px;
 }
@@ -81,4 +87,44 @@
 
 #Berita .IsiBerita img{
   width: 500px;
+}
+
+.about{
+  padding: 50px 0 50px 0;
+}
+
+.about p{
+  text-align: justify;
+}
+
+.footer{
+  background-color: #1c477f;
+}
+
+/* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
 }

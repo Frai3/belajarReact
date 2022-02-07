@@ -1,13 +1,15 @@
 import './App.css';
-import NavigationHeader from './navigationHeader'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { React } from 'react';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
+//Header & Footer
+import NavigationHeader from './navigationHeader'
+import Footer from "./footer"
+
 //Navbar
-import Portofolio from './tes/portofolio'
-import Home from './tes/home';
-import About from './tes/about';
+import Home from './navBar/home';
+import About from './navBar/about';
 
 //Konten Berita
 import Boruto from './berita/boruto';
@@ -22,15 +24,17 @@ const App = () => {
     <NavigationHeader />
     <Switch>
       {/* Navbar */}
+      <div className="background">
       <Route path="/" exact component={Home} />
       <Route path="/about" component={About} />
-      <Route path="/portofolio" component={Portofolio} />
+      </div>
       {/* Konten Berita */}
       <Route path="/boruto" component={Boruto} />
       <Route path="/sarada" component={Sarada} />
       <Route path="/kawaki" component={Kawaki} />
       <Route path="/mitsuki" component={Mitsuki} />
     </Switch>
+    <Footer />
   </Router>    
   );
 }
